@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <title>AI Chat</title>
+  </head>
+
+  <body class="bg-[#151515]">
+    <main
+      class="mx-auto flex h-screen max-w-[900px] flex-col bg-[#151515] px-10 py-5 text-white"
+    >
+      <!-- ========================= -->
+      <!-- CHAT AREA -->
+      <!-- ========================= -->
+
+      <div
+        id="chatContainer"
+        class="hide-scrollbar flex flex-1 flex-col gap-6 overflow-y-auto pb-8"
+      >
+        <!-- USER MESSAGE -->
+        <div class="flex justify-end">
+          <div
+            class="max-w-[70%] rounded-[15px] bg-[#242424] px-4 py-3 text-[16px]"
+          >
+            Hi, how are you ?
+          </div>
+        </div>
+
+        <!-- AI MESSAGE -->
+        <div class="flex justify-start">
+          <div class="max-w-[70%] px-1 py-2 text-[16px]">
+            what is the weather ?
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================= -->
+      <!-- INPUT BOX -->
+      <!-- ========================= -->
+
+      <div
+        class="relative mb-3 min-h-[110px] w-full rounded-[22px] bg-[#242424]"
+      >
+        <textarea
+          id="userInput"
+          class="h-[110px] w-full resize-none rounded-[22px] bg-transparent px-5 py-5 pr-24 pb-14 text-[16px] text-white outline-none"
+        ></textarea>
+
+        <button
+          id="askButton"
+          class="absolute bottom-2 right-2 cursor-pointer rounded-full bg-white px-5 py-2 font-medium text-black transition hover:bg-gray-200 active:scale-95"
+        >
+          Ask
+        </button>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
